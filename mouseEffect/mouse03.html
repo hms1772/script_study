@@ -72,6 +72,9 @@
                 line-height: 1.8;
                 margin-bottom: 3px;
             }
+            .info li:hover {
+                color: orange;
+            }
             .info.left {
                 left: 20px;
                 top: 20px;
@@ -79,6 +82,12 @@
             .info.bottom {
                 left: 10px;
                 bottom: 10px;
+            }
+            .info.bottom li.active {
+                color: orange;
+            }
+            .info.bottom li:hover {
+                color: orange;
             }
             
             @media (max-width: 800px){
@@ -154,7 +163,7 @@
                 <li>color-burn</li>
                 <li>hard-light</li>
                 <li>soft-light</li>
-                <li class="active">difference</li>
+                <li>difference</li>
                 <li>exclusion</li>
                 <li>hue</li>
                 <li>saturation</li>
@@ -181,6 +190,11 @@
             });
 
             //출력용
+            $(".info.bottom li").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+                const text = $(this).text();
+                $(".cursor").css("mix-blend-mode", text);
+            });
         </script>
     </body>
 </html>
