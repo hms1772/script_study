@@ -158,7 +158,9 @@
         <script>
             //출력용
             $(window).mousemove(function(e){
-                console.log(e);
+                // console.log(e);
+                $('.pageX').text(e.pageX);
+                $('.pageY').text(e.pageY);
             });
         </script>
     </body>
