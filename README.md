@@ -10,6 +10,6 @@
 제이쿼리(gsap사용) : https://miseon91.github.io/script_study/mouseEffect/mouse02_gsap.html <br>
 자바스크립트 : https://miseon91.github.io/script_study/mouseEffect/mouse02-javascript.html <br><br>
 
-마우스 효과 03 <br>
+마우스 효과 03 (blend mode)<br>
 제이쿼리 : https://miseon91.github.io/script_study/mouseEffect/mouse03.html <br>
 자바스크립트 : https://miseon91.github.io/script_study/mouseEffect/mouse03-javascript.html <br><br>
