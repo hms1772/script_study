@@ -1,5 +1,5 @@
 # script_study
-<br><br><br>
+<br><br>
 마우스효과 <br>
 마우스 효과 01 <br>
 제이쿼리 : https://miseon91.github.io/script_study/mouseEffect/mouse01.html <br>
