@@ -179,6 +179,13 @@
                 follower.css({left: e.pageX - 15, top: e.pageY - 15});
             });
 
+            //오버효과
+            $('.contents em').hover(function(){
+                cursor.addClass('active');
+            }, function(){
+                cursor.removeClass('active');
+            });
+
             //출력용
             $(window).mousemove(function(e){
                 //console.log(e);
