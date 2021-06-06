@@ -197,7 +197,12 @@
                 info.addEventListener("click", function(){
                     const text = this.textContent || this.innerHTML;
                     // alert(text);
-                })
+                    cursor.style.mixBlendMode = text;
+                    document.querySelectorAll(".info.bottom li").forEach(li => {
+                        li.classList.remove("active");
+                        this.classList.add("active");
+                    });
+                });
             });
         </script>
     </body>
