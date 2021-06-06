@@ -112,21 +112,18 @@
             }
             .cursor {
                 position: absolute;
-                left: -100px;
-                top: -100px;
-                width: 10px;
-                height: 10px;
+                width: 10px; height: 10px;
                 background: #fff;
                 border-radius: 50%;
                 z-index: 1000;
                 user-select: none;
                 pointer-events: none;
                 transform: scale(1);
-                transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+                transition: transform 0.3s ease-in-out;
+                mix-blend-mode: difference;
             }
             .cursor.active {
-                opacity: 0.5s;
-                transform: scale(0);
+                transform: scale(12);
             }
         </style>
     </head>
