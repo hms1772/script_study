@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect04 - jQuery</title>
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'SEBANG_Gothic_Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+        a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        ul {
+            padding: 10px 20px;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            background: url(../assets/img/wi.jpg) no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            transition: all 0.2s;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'SEBANG_Gothic_Regular';
+            cursor: none;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 12, 26, 0.8);
+            z-index: -1;
+        }
+        /* info */
+        .info {
+            position: absolute;
+            z-index: 1000;
+        }
+        .info h1 {
+            font-size: 20px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 8px;
+        }
+        .info li {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 3px;
+        }
+        .info li:hover {
+            color: orange;
+        }
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+        .info.bottom {
+            left: 10px;
+            bottom: 10px;
+        }
+        .info.bottom li.active {
+            color: orange;
+        }
+        .info.bottom li:hover {
+            color: orange;
+        }
+        
+        @media (max-width: 800px){
+            .info.bottom {display: none;}
+            .info.right {display: none;}
+        }
+
+        /* main */
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .contents p {
+            max-width: 70vw;
+            font-size: 2.5vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2.2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: orange;
+            border-bottom: 2px dashed orange;
+            font-style: normal;
+        }
+        .cursor {
+            position: absolute;
+            width: 10px; height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            mix-blend-mode: difference;
+        }
+
+        .cursor.active {
+            transform: scale(12);
+        }
+
+    </style>
+    </head>
+    <body>
+        <!-- main -->
+        <main>
+            <div class="cursor"></div>
+            <div class="contents">
+                <p></p>
+                <p></p>
+            </div>
+        </main>
+        <!-- //main -->
+        <!-- info -->
+        <div class="info left">
+            <h1><a href="#">마우스 효과 04 _ jQuery .ver</a></h1>
+        </div>
+        <div class="info bottom">
+            <ul>
+                <li>pageX : <span class="pageX">0</span></li>
+                <li>pageY : <span class="pageY">0</span></li>
+                <li>mouoseX : <span class="mouseX">0</span></li>
+                <li>mouseY : <span class="mouseY">0</span></li>
+                <li>angleX : <span class="angleX">0</span></li>
+                <li>angleY : <span class="angleY">0</span></li>
+                <li>fmouoseX : <span class="fmouoseX">0</span></li>
+                <li>fmouseY : <span class="fmouseY">0</span></li>
+            </ul>
+        </div>
+        <!-- //info -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            
+        </script>
+    </body>
+</html>
