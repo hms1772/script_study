@@ -176,7 +176,7 @@
             //움직임효과
             $(window).mousemove(function(e){
                 cursor.css({left: e.pageX, top: e.pageY});
-                follower.css({left: "200px", top: "300px"});
+                follower.css({left: e.pageX, top: e.pageY});
             });
 
             //출력용
