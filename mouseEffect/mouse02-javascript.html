@@ -175,8 +175,12 @@
 
             //움직임효과
             document.addEventListener("mousemove", (e) => {
-                cursor.style.left = e.pageX;
-                cursor.style.top = e.pageY;
+                //커서값이 계속 변화해 값을 계속 넣어줘야 함. 그래서 아래는 사용할 수 없다
+                // cursor.style.left = e.pageX;
+                // cursor.style.top = e.pageY;
+
+                gasp.to(cursor, {duration: 0.3, left: e.pageX - 5, top: e.pageY - 5});
+                gasp.to(follower, {duration: 0.8, left: e.pageX - 15, top: e.pageY - 15});
             });
 
             //출력용
