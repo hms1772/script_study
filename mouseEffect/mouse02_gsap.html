@@ -176,6 +176,7 @@
             //움직임효과
             $(window).mousemove(function(e){
                gsap.to(cursor, {left: e.pageX - 5, top: e.pageY - 5});
+               gsap.to(follower, {left: e.pageX - 15, top: e.pageY - 15});
             });
 
             //오버효과
