@@ -115,8 +115,10 @@
             content: '';
             position: absolute;
             z-index: -1;
-            left: 5%; bottom: -20px;
-            width: 90%; height: 40px;
+            left: 5%; 
+            bottom: -5px;
+            width: 90%; 
+            height: 40px;
             background: url(../assets/img/bb.jpg) no-repeat;
             background-size: 100% 40px;
             filter: blur(15px);
@@ -135,7 +137,7 @@
         }
 
         .move-image .mtext p:nth-child(1){
-            font-size: 0.5vw;
+            font-size: 0.8vw;
         }
 
         .cursor {
@@ -191,8 +193,11 @@
         <!-- //info -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
         <script>
-            
+            $(window).mousemove(function(){
+                
+            });
         </script>
     </body>
 </html>
