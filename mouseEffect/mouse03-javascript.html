@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mouse Effect03 - Javacript</title>
         <style>
-/* reset */
-@font-face {
+            /* reset */
+            @font-face {
                 font-family: 'SEBANG_Gothic_Regular';
                 src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
                 font-weight: normal;
@@ -36,7 +36,7 @@
                 list-style: none;
             }
             body {
-                background: url(../assets/img/wi.jpg) no-repeat center center;
+                background: url(../assets/img/gr.jpg) no-repeat center center;
                 background-size: cover;
                 color: #fff;
                 height: 100vh;
@@ -72,6 +72,9 @@
                 line-height: 1.8;
                 margin-bottom: 3px;
             }
+            .info li:hover {
+                color: orange;
+            }
             .info.left {
                 left: 20px;
                 top: 20px;
@@ -79,6 +82,12 @@
             .info.bottom {
                 left: 10px;
                 bottom: 10px;
+            }
+            .info.bottom li.active {
+                color: orange;
+            }
+            .info.bottom li:hover {
+                color: orange;
             }
             
             @media (max-width: 800px){
@@ -122,6 +131,7 @@
                 transition: transform 0.3s ease-in-out;
                 mix-blend-mode: difference;
             }
+
             .cursor.active {
                 transform: scale(12);
             }
@@ -132,8 +142,8 @@
         <main>
             <div class="cursor"></div>
             <div class="contents">
-                <p>A goal <em>without a plan</em> is just a <em>wish</em>.</p>
-                <p><em>계획 없는</em> 목표는 단지 <em>꿈</em>에 불과하다.</p>
+                <p>We are all <em>growing</em>.</p>
+                <p>우리는 모두 <em>성장</em>하고 있다.</p>
             </div>
         </main>
         <!-- //main -->
@@ -162,5 +172,8 @@
             </ul>
         </div>
         <!-- //info -->
+        <script>
+
+        </script>
     </body>
 </html>
