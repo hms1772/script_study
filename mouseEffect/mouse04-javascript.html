@@ -45,7 +45,7 @@
             font-size: 16px;
             line-height: 1.5;
             font-family: 'SEBANG_Gothic_Regular';
-            cursor: none;
+            /* cursor: none; */
         }
         body::before {
             content: '';
@@ -54,7 +54,7 @@
             top: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(0, 12, 26, 0.8);
+            background: rgba(18, 14, 12, 0.8);
             z-index: -1;
         }
         /* info */
@@ -73,7 +73,7 @@
             margin-bottom: 3px;
         }
         .info li:hover {
-            color: orange;
+            color: coral;
         }
         .info.left {
             left: 20px;
@@ -84,10 +84,10 @@
             bottom: 10px;
         }
         .info.bottom li.active {
-            color: orange;
+            color: coral;
         }
         .info.bottom li:hover {
-            color: orange;
+            color: coral;
         }
         
         @media (max-width: 800px){
@@ -96,29 +96,47 @@
         }
 
         /* main */
-        .contents {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            flex-direction: column;
-            overflow: hidden;
+        .move-image { 
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
         }
-        .contents p {
-            max-width: 70vw;
-            font-size: 2.5vw;
-            text-align: justify;
+
+        .move-image .mimg img {
+            border-radius: 5px;
         }
-        .contents p:first-child {
-            font-size: 2.2vw;
-            line-height: 2;
+
+        .move-image .mimg {
+            position: relative;
         }
-        .contents p em {
-            color: orange;
-            border-bottom: 2px dashed orange;
-            font-style: normal;
+
+        .move-image .mimg::before {
+            content: '';
+            position: absolute; z-index: -1;
+            left: 5%; bottom: -20px;
+            width: 90%; height: 40px;
+            background: url(../parallax2/img/su05.jpg) no-repeat;
+            background-size: 100% 40px;
+            filter: blur(15px);
+            opacity: 0.9;
         }
+
+        .move-image .mtext {
+            font-size: 1vw;
+            position: absolute;
+            left: 50%; bottom: 50%;
+            transform: translate3d(-50%, 68%, 150px);
+            background: rgba(0,0,0,0.3);
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .move-image .mtext p:nth-child(1){
+            font-size: 0.5vw;
+        }
+
         .cursor {
             position: absolute;
             width: 10px; height: 10px;
@@ -129,7 +147,6 @@
             pointer-events: none;
             transform: scale(1);
             transition: transform 0.3s ease-in-out;
-            mix-blend-mode: difference;
         }
 
         .cursor.active {
