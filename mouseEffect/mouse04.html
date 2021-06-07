@@ -195,8 +195,34 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
         <script>
-            $(window).mousemove(function(){
-                
+            //전역변수
+            let x = 0,
+                y = 0,
+                mouseX = 0,
+                mouseY = 0;
+
+            $(window).mousemove(function(e){
+                //지역변수로 전역변수 값을 바꿈
+                x = e.pageX;    //마우스 x축 좌표값
+                y = e.pageY;    //마우스 y축 좌표값
+
+                // mouseX = $(window).width()/2 - x; //마우스의 x축 좌표값을 가운데로 설정
+                // mouseY = $(window).width()/2 - y; //마우스의 y축 좌표값을 가운데로 설정
+
+                //마우스의 x축과 y축 최소값 -50, 최대값 50 설정
+                mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x ));
+                mouseY = Math.max(-50, Math.min(50, $(window).width()/2 - y ));
+            
+                //움직임
+                $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ mouseX +"deg) rotateY("+ mouseY +"deg)"});
+            });
+
+            //출력
+            $(window).mousemove(function(e){
+                $('.pageX').text(x);
+                $('.pageY').text(y);
+                $('.mouseX').text(mouseX);
+                $('.mouseY').text(mouseY);
             });
         </script>
     </body>
