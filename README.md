@@ -13,3 +13,7 @@
 마우스 효과 03 (blend mode)<br>
 제이쿼리 : https://miseon91.github.io/script_study/mouseEffect/mouse03.html <br>
 자바스크립트 : https://miseon91.github.io/script_study/mouseEffect/mouse03-javascript.html <br><br>
+
+마우스 효과 04 (마우스 방향에 따라 움직이는 효과)<br>
+제이쿼리 : https://miseon91.github.io/script_study/mouseEffect/mouse04.html <br>
+자바스크립트 : <br><br>
