@@ -45,7 +45,7 @@
             font-size: 16px;
             line-height: 1.5;
             font-family: 'SEBANG_Gothic_Regular';
-            /* cursor: none; */
+            cursor: none;
         }
         body::before {
             content: '';
@@ -203,18 +203,18 @@
             mouseX = Math.max(-50, Math.min(50, window.innerWidth/2 - x));
             mouseY = Math.max(-50, Math.min(50, window.innerHeight/2 - y));
 
-            angleX = (mouseX * 12) / 100;
-            angleY = (mouseY * 12) / 100;
+            angleX = (12 * mouseX) / 100;
+            angleY = (12 * mouseY) / 100;
 
             //값이 초기화되지 않고 누적
             fmouseX += angleX - mouseX * 1/10;
             fmouseY += angleY - mouseY * 1/10;
 
             //커서
-            gsap.to(".cursor", {duration: 0.3, left: x, top: y}); 
+            gsap.to(".cursor", {duration: 0.4, left: x, top: y}); 
 
             //움직임
-            let move =document.querySelector(".move-image");
+            let move = document.querySelector(".move-image");
             move.style.transform = "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+-fmouseX+"deg)";
         });
 
