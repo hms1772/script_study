@@ -186,7 +186,7 @@
                 <li>mouseY : <span class="mouseY">0</span></li>
                 <li>angleX : <span class="angleX">0</span></li>
                 <li>angleY : <span class="angleY">0</span></li>
-                <li>fmouoseX : <span class="fmouoseX">0</span></li>
+                <li>fmouseX : <span class="fmouseX">0</span></li>
                 <li>fmouseY : <span class="fmouseY">0</span></li>
             </ul>
         </div>
@@ -223,8 +223,8 @@
                 fmouseX += (angleX - fmouseX) * 1/10;
                 fmouseY += (angleY - fmouseY) * 1/10;
 
-                console.log(fmouseX);
-                console.log(fmouseY);
+                // console.log(fmouseX);
+                // console.log(fmouseY);
 
                 //움직임
                 $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ fmouseY +"deg) rotateY("+ fmouseX +"deg)"});
@@ -238,6 +238,8 @@
                 $('.mouseY').text(mouseY);
                 $('.angleX').text(angleX);
                 $('.angleY').text(angleY);
+                $('.fmouseX').text(fmouseX);
+                $('.fmouseY').text(fmouseY);
             });
         </script>
     </body>
