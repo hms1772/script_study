@@ -199,7 +199,11 @@
             let x = 0,
                 y = 0,
                 mouseX = 0,
-                mouseY = 0;
+                mouseY = 0,
+                angleX = 0,
+                angleY = 0,
+                fmouseX = 0,
+                fmouseY = 0;
 
             $(window).mousemove(function(e){
                 //지역변수로 전역변수 값을 바꿈
@@ -213,8 +217,17 @@
                 mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x ));
                 mouseY = Math.max(-50, Math.min(50, $(window).width()/2 - y ));
             
+                angleX = (12 * mouseX) / 100;
+                angleY = (12 * mouseY) / 100;
+
+                fmouseX += (angleX - fmouseX) * 1/10;
+                fmouseY += (angleY - fmouseY) * 1/10;
+
+                console.log(fmouseX);
+                console.log(fmouseY);
+
                 //움직임
-                $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ mouseX +"deg) rotateY("+ mouseY +"deg)"});
+                $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ fmouseY +"deg) rotateY("+ fmouseX +"deg)"});
             });
 
             //출력
@@ -223,6 +236,8 @@
                 $('.pageY').text(y);
                 $('.mouseX').text(mouseX);
                 $('.mouseY').text(mouseY);
+                $('.angleX').text(angleX);
+                $('.angleY').text(angleY);
             });
         </script>
     </body>
