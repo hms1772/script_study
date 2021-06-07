@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect04 - JavaScript</title>
-    <style>
-        /* reset */
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mouse Effect04 - Javacript</title>
+        <style>
+            /* reset */
         @font-face {
             font-family: 'SEBANG_Gothic_Regular';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
@@ -45,7 +45,7 @@
             font-size: 16px;
             line-height: 1.5;
             font-family: 'SEBANG_Gothic_Regular';
-            /* cursor: none; */
+            cursor: none;
         }
         body::before {
             content: '';
@@ -113,10 +113,13 @@
 
         .move-image .mimg::before {
             content: '';
-            position: absolute; z-index: -1;
-            left: 5%; bottom: -20px;
-            width: 90%; height: 40px;
-            background: url(../parallax2/img/su05.jpg) no-repeat;
+            position: absolute;
+            z-index: -1;
+            left: 5%; 
+            bottom: -5px;
+            width: 90%; 
+            height: 40px;
+            background: url(../assets/img/bb.jpg) no-repeat;
             background-size: 100% 40px;
             filter: blur(15px);
             opacity: 0.9;
@@ -134,7 +137,7 @@
         }
 
         .move-image .mtext p:nth-child(1){
-            font-size: 0.5vw;
+            font-size: 0.8vw;
         }
 
         .cursor {
@@ -149,19 +152,21 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .cursor.active {
-            transform: scale(12);
-        }
-
-    </style>
+        </style>
     </head>
     <body>
         <!-- main -->
         <main>
             <div class="cursor"></div>
             <div class="contents">
-                <p><em>A goal without a plan</em> is just <em>wish</em>.</p>
-                <p><em>계획 없는 목표</em>는 단지 <em>꿈</em>에 불과하다.</p>
+                
+            </div>
+            <div class="move-image">
+                <div class="mimg"><img src="../assets/img/bb.jpg" alt="이미지"></div>
+                <div class="mtext">
+                    <p>A goal without a plan is just wish.</p>
+                    <p>계획 없는 목표는 단지 꿈에 불과하다.</p>
+                </div>
             </div>
         </main>
         <!-- //main -->
@@ -177,13 +182,15 @@
                 <li>mouseY : <span class="mouseY">0</span></li>
                 <li>angleX : <span class="angleX">0</span></li>
                 <li>angleY : <span class="angleY">0</span></li>
-                <li>fmouoseX : <span class="fmouoseX">0</span></li>
+                <li>fmouseX : <span class="fmouseX">0</span></li>
                 <li>fmouseY : <span class="fmouseY">0</span></li>
             </ul>
         </div>
         <!-- //info -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script>
+
         <script>
             
         </script>
