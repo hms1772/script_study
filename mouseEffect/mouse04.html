@@ -215,7 +215,7 @@
 
                 //마우스의 x축과 y축 최소값 -50, 최대값 50 설정
                 mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x ));
-                mouseY = Math.max(-50, Math.min(50, $(window).width()/2 - y ));
+                mouseY = Math.max(-50, Math.min(50, $(window).height()/2 - y ));
             
                 angleX = (12 * mouseX) / 100;
                 angleY = (12 * mouseY) / 100;
@@ -226,8 +226,11 @@
                 // console.log(fmouseX);
                 // console.log(fmouseY);
 
+                //커서
+                gsap.to((".cursor"), {dauration: 0.3, left: x, top: y});
+
                 //움직임
-                $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ fmouseY +"deg) rotateY("+ fmouseX +"deg)"});
+                $(".move-image").css({ "transform": "translate(-50%, -50%) perspective(600px) rotateX("+ fmouseY +"deg) rotateY("+ -fmouseX +"deg)"});
             });
 
             //출력
@@ -238,8 +241,8 @@
                 $('.mouseY').text(mouseY);
                 $('.angleX').text(angleX);
                 $('.angleY').text(angleY);
-                $('.fmouseX').text(fmouseX);
-                $('.fmouseY').text(fmouseY);
+                $('.fmouseX').text(Math.round(fmouseX));
+                $('.fmouseY').text(Math.round(fmouseY));
             });
         </script>
     </body>
